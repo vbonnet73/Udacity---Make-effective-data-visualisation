@@ -12,23 +12,24 @@ I also choose to design a bar charts showing the evolution of forcibly displaced
 The legend is composed of three elements. The first one is a dynamic element identifying the value of displaced people the location and the year considered. The second one identify the armed conflict intensity color scale. The third one are circles explaining the link between the size ans the number of displaces people. I had last one after feedbacks explainign that it was not clear what the blue circles represent. Finally I had animations to my visualization. It starts with a dynamic evolution form 1951 to 2014. Afterwards it is allowed to update the visualization by clicking on any countries on the map or a bar charts for a given year. Clicking on the background reset to the worlwide visualization.
 
 
-**Feedback** - include all feedback you received from others on your visualization from the first sketch to the final visualization  
-Feedback n°1  - Status of the project : Initial sketch
+**Feedback**  
+
+*Feedback n°1  - Status of the project : Initial sketch*
 When I start the project I just wanted to show the growing number of forcibly displaced people other the world. When I share my first visualization with my friends their feedback was : "Ok great but what is your message? What is the main reason for forced migration? " I decided to add to my visualization armed conflict location and make the correlation stands out.  
 
-Feedback n°2 - First visualization released  
+*Feedback n°2 - First visualization released*  
 The feedback was to add a legend explaining the meaning of the circles and sizes. I decide to add this legend
 
-Feedback n°3 : First visualization released  
+*Feedback n°3 : First visualization released* 
 In my first released, on click on a country, the bar chart was updated for the country but the scale was the same as the worlwide view. As a consequence, the bar charts for a giving country show almost nothing. I also took into account this feedback addign a updating scale to the bar charts
 
-Feedback n°4 : Second vizualisation relaesed with above feedbacks integrated
+*Feedback n°4 : Second vizualisation relaesed with above feedbacks integrated*
 Several feedbacks mentionned I should add a title to the bar chats y-axis to be clear on what I show. I add it
 
-Feedback n°5 : Final visualization
+*Feedback n°5 : Final visualization*
 The feedback were very positive. I get particulary good feedbacks on the animation capabilities
 
-**Resources** - list any sources you consulted to create your visualization  
+**Resources** 
 * Displaced people data : http://popstats.unhcr.org/en/persons_of_concern
 * Armed conflict data : http://ucdp.uu.se/downloads/
 * https://bl.ocks.org/mbostock
