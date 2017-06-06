@@ -17,19 +17,19 @@ The legend is composed of three elements. The first one is a dynamic element ide
 *Feedback n°1  - Status of the project : Initial sketch*
 When I start the project I just wanted to show the growing number of forcibly displaced people other the world. When I share my first visualization with my friends their feedback was : "Ok great but what is your message? What is the main reason for forced migration? " I decided to add to my visualization armed conflict location and make the correlation stands out.  
 
-*Feedback n°2 - First visualization released*  
+*Feedback n°2 - First visualization released*   
 The feedback was to add a legend explaining the meaning of the circles and sizes. I decide to add this legend
 
-*Feedback n°3 : First visualization released* 
+*Feedback n°3 : First visualization released*  
 In my first released, on click on a country, the bar chart was updated for the country but the scale was the same as the worlwide view. As a consequence, the bar charts for a giving country show almost nothing. I also took into account this feedback addign a updating scale to the bar charts
 
-*Feedback n°4 : Second vizualisation relaesed with above feedbacks integrated*
+*Feedback n°4 : Second vizualisation relaesed with above feedbacks integrated*  
 Several feedbacks mentionned I should add a title to the bar chats y-axis to be clear on what I show. I add it
 
-*Feedback n°5 : Final visualization*
+*Feedback n°5 : Final visualization*  
 The feedback were very positive. I get particulary good feedbacks on the animation capabilities  
 
-*Feedback n°6 : First review*
+*Feedback n°6 : First review*  
 It was recommended to add a sentence making my visualization explanatory. I add them beneath the title. It was also recommended to add a tooltip when passing on circles. I add it to. At last it was requested to change the armed conflict location colors from red to something less striking. I choose light yellows shades.
 
 **Resources** 
