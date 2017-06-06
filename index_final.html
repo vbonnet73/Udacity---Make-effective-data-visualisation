@@ -15,6 +15,11 @@
         text-align: center;
         }
 
+      h5 {
+        font-family: arial, arial black, sans-serif;
+        text-align: center;
+        }
+
       .background {
         fill : white;
       }
@@ -30,7 +35,7 @@
 
       #million{
         font-weight: bold;
-        fill : darkblue;
+        fill : steelblue;
         }
       
 
@@ -77,6 +82,18 @@
         stroke-width: 0.5px;
       }
 
+      div.tooltip { 
+        position: absolute;     
+        text-align: center;    
+        width: 80px;          
+        height: 28px;         
+        padding: 2px;       
+        font: 12px sans-serif;    
+        background: steelblue; 
+        border: 0px;    
+        border-radius: 8px;     
+        pointer-events: none;
+
     </style>
     <script type="text/javascript">
 
@@ -120,7 +137,10 @@
           // Creating H2 title
           d3.select("body")
             .append("h2")
-            .text("Forcibly displaced people worlwide (by country of origin)");
+            .text("Growing number of forcibly displaced people worlwide (by country of origin)");
+          d3.select("body")
+            .append("h5")
+            .text("Since 1951, the number of forcibly displaced people is continuously growing. The main locations of origin are highly correlated with armed conflicts or wars places");
           
           // Set a svg element which will contain a map, and a background
           var svg = d3.select("body")
@@ -196,9 +216,9 @@
                     .attr("height", 10)
                     .attr("fill", function(d) {
                         if (d == "Minor armed conflicts") {
-                            return "#ffb3b3" ;
+                            return "lightyellow" ;
                         } else {
-                            return "red";
+                            return "khaki";
                         }
                     });
             legend.append("text")
@@ -222,6 +242,11 @@
           // Create axis scales
           var x = d3.scaleBand().rangeRound([0, width]).padding(0.1);
           var y = d3.scaleLinear().rangeRound([150, 0]);
+
+          //// Define the div for the tooltip
+          var div = d3.select("body").append("div") 
+                                     .attr("class", "tooltip")       
+                                     .style("opacity", 0);
 
           
 
@@ -463,7 +488,7 @@
                 d3.select("#title")
                   .text("Person of concern from " )
                   .append("tspan")
-                    .style("fill", "darkblue")
+                    .style("fill", "steelblue")
                     .style("font-weight", "bold")
                     .text(country_NAME)
                   .append("tspan")
@@ -495,7 +520,15 @@
                               })
                      .on("click", function(d) {
                             update_countries(d.key, country_data);
-                          });
+                          })
+                     .on("mouseover", function(d) {
+                            tooltip(d.key, country_data);
+                          })
+                     .on("mouseout", function(d) {   
+                        div.transition()    
+                            .duration(500)    
+                            .style("opacity", 0); 
+                         });
 
               // Create new circles needed
               circles.enter()
@@ -511,7 +544,15 @@
                               })
                      .on("click", function(d) {
                             update_countries(d.key, country_data);
-                          });
+                          })
+                     .on("mouseover", function(d) {
+                            tooltip(d.key, country_data);
+                          })
+                     .on("mouseout", function(d) {   
+                        div.transition()    
+                            .duration(500)    
+                            .style("opacity", 0); 
+                         });
 
               // Update countries color depending if the conflict intensity affiliated
               paths = svg.selectAll(".feature")
@@ -530,10 +571,10 @@
                 });
                 if (filter_nyoy_country.length > 0) {
                   if (filter_nyoy_country[0].value["intensity"] == 2) {
-                      return "red";
+                      return "khaki";
                   };
                   if (filter_nyoy_country[0].value["intensity"] == 1) {
-                      return "#ffb3b3";
+                      return "lightyellow";
                   } else {return "#cccccc";};
                 };
             });
@@ -564,6 +605,26 @@
 
 
             /////////// CREATE ANIMATIONS /////////////
+            // Display a tooltip when passing on a bubble
+            function tooltip(country_id, country_data) {
+              // filter country data for a given country id
+              var filter_countryId = country_data.filter(function(d) {
+                if(d.alpha3 == country_id) { return true; }
+              });
+
+              // Update country variable with country_name;
+              country_NAME = filter_countryId[0].name;
+
+              div.transition()    
+                 .duration(200)    
+                 .style("opacity", .9);    
+              div.html(country_NAME)  
+                 .style("left", (d3.event.pageX) + "px")   
+                 .style("top", (d3.event.pageY) + "px");
+
+            }
+
+
             // Update map for a giving country
             function update_countries(country_id, country_data) {
               // filter the nested_year_origin data for years
@@ -598,7 +659,7 @@
               d3.select("#title")
                 .text("Person of concern from " )
                 .append("tspan")
-                  .style("fill", "darkblue")
+                  .style("fill", "steelblue")
                   .style("font-weight", "bold")
                   .text(country_NAME)
                 .append("tspan")
