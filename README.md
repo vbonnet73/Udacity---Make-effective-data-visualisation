@@ -30,7 +30,7 @@ Several feedbacks mentionned I should add a title to the bar chats y-axis to be 
 The feedback were very positive. I get particulary good feedbacks on the animation capabilities  
 
 *Feedback n°6 : First review*  
-It was recommended to add a sentence making my visualization explanatory. I add them beneath the title. It was also recommended to add a tooltip when passing on circles. I add it too. At last it was recommended to change the armed conflict location colors from red to something less striking. I choose light yellows shades.
+It was recommended to add a sentence making my visualization explanatory. I add it below the title. It was also recommended to add a tooltip when passing on circles. I add it too. At last it was recommended to change the armed conflict location colors from red to something less striking. I choose light yellows shades.
 
 **Resources** 
 * Displaced people data : http://popstats.unhcr.org/en/persons_of_concern
