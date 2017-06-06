@@ -192,6 +192,7 @@
              .attr("id","million")
              .attr('transform', 'translate(40,50)');
 
+
            // Create legend
             var legend = svg.append("g")
                           .attr("class", "legend")
@@ -228,7 +229,6 @@
                     })
                     .attr("x", 5*5)
                     .attr("font-family", "Helvetica Neue")
-                    //.attr("font-size", "50%")
                     .text(function(d) {
                         return d;
                      });
@@ -354,47 +354,58 @@
                   .attr('cx', 10)
                   .attr('cy', 100)
                   .attr('r', radius(10000000));
+
              legend.append("text")
                    .attr("class", "text_legend")
                    .attr("x", 10+radius(10000000)+10)
                    .attr("y", 100 - radius(10000000)+5)
                    .text("10 million");
+
             legend.append("path")
                   .attr("class", "line")
                   .attr("d", "M10,75L40,75");
+
             legend.append("circle")
                   .attr('cx', 10)
                   .attr('cy', 100+radius(10000000)-radius(5000000))
                   .attr('r', radius(5000000));
+
             legend.append("text")
                    .attr("class", "text_legend")
                    .attr("x", 10+radius(10000000)+10+6)
                    .attr("y", 100 - radius(10000000) + 20)
                    .text("5 million");
+
             legend.append("path")
                   .attr("class", "line")
                   .attr("d", "M10,90L40,90");
+
             legend.append("circle")
                   .attr('cx', 10)
                   .attr('cy', 100+radius(10000000)-radius(1000000))
                   .attr('r', radius(1000000));
+
             legend.append("text")
                    .attr("class", "text_legend")
                    .attr("x", 10+radius(10000000)+10+6)
                    .attr("y", 100 - radius(10000000) + 35)
                    .text("1 million");
+
             legend.append("path")
                   .attr("class", "line")
                   .attr("d", "M10,110L40,110");
+
             legend.append("circle")
                   .attr('cx', 10)
                   .attr('cy', 100+radius(10000000)-radius(100000))
                   .attr('r', radius(100000));
+
             legend.append("text")
                    .attr("class", "text_legend")
                    .attr("x", 10+radius(10000000)+10-4)
                    .attr("y", 100 - radius(10000000) + 50)
                    .text("0.1 million");
+                   
             legend.append("path")
                   .attr("class", "line")
                   .attr("d", "M10,120L40,120");
